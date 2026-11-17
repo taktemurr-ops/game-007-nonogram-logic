@@ -1,29 +1,34 @@
-# Nonogram Logic
+# Game 007 — Nonogram Logic
 
-Game Studio 100 | Bulmaca ve Zeka | Flutter + Flame | Android + iOS
+Original 160-stage offline nonogram puzzle built with Flutter. It includes 20
+original bitmap drawings with 8 transformations each; taps, marked empty cells,
+undo and redo; free reveal hint; local progress and save/restore; classic, daily,
+timed, zen gameplay; Turkish / English / Arabic UI; settings and local-data
+removal. No ad, payment, account or analytics SDK is enabled.
 
-## Product strategy
-Combine useful modes and mechanisms of competing games into one cohesive,
-distinctive, legally independent game. Competitive features are research
-candidates, NOT confirmed implementations.
+## Run
 
-## MVP
-- Reliable core gameplay loop with pause/resume, save, audio and settings
-- Guided onboarding, session metrics and accessibility considerations
-- Levels or escalating difficulty; progress and achievements
-- Ad and IAP adapters (disabled until fully configured and tested)
-- Android/iOS release preparation and privacy requirements
+```sh
+flutter create --platforms=android,ios --project-name game_007_nonogram_logic .
+flutter pub get
+flutter analyze --no-fatal-infos
+flutter test
+flutter build apk --debug
+```
 
-## Later releases
-- Additional game modes and mechanics after competitor analysis
-- Events, daily challenges, cosmetics, social or leaderboard features where suitable
-- Analytics and A/B tests for retention, difficulty and ad frequency
+`flutter create` generates the `android/` and `ios/` host directories for
+this source-only repository. iOS verification additionally needs macOS + Xcode.
 
-## Acceptance
-- Deterministic rule tests and device performance verification
-- Game plays without crashes; save/load retains progress
-- Offline play where the mode does not require a network
-- Ads never interrupt an active gameplay turn
-- Store policy, privacy consent and purchase restore checks
+## Release status
 
-See docs for feature backlog, research method, revenue plan and roadmap.
+**Not certified for a store release** until CI logs, emulator and physical
+Android tests, signed iOS tests, privacy disclosures, accessibility checks,
+icon/screenshots, and store signing are complete. Ads and purchases have not
+been configured: they must not be described as implemented. See
+`docs/RELEASE_READINESS.md` for all remaining verifications.
+
+## Originality
+
+All picture patterns are defined in `lib/game/nonogram_catalog.dart`; no
+third-party artwork is copied. Commercial dependencies and branding require
+separate review before release.

@@ -1,24 +1,10 @@
-name: Flutter verification
+name: Legacy Flutter CI (redirect)
 on:
-  push:
-    branches: [main]
-  pull_request:
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
-  analyze-test-android:
+  legacy-notice:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          cache: true
-      - run: flutter pub get
-      - run: flutter analyze
-      - run: flutter test
-      - run: flutter build apk --debug
-      - uses: actions/upload-artifact@v4
-        if: success()
-        with:
-          name: android-debug-apk
-          path: build/app/outputs/flutter-apk/app-debug.apk
+      - run: echo 'Use flutter-ci.yml for Android, iOS and test verification.'

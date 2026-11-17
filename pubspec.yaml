@@ -1,13 +1,13 @@
 name: game_007_nonogram_logic
-description: Game Studio 100 - Nonogram Logic
+description: Offline nonogram picture logic game for Android and iOS
 publish_to: none
-version: 0.1.0+1
+version: 1.0.0+1
 environment:
   sdk: '>=3.3.0 <4.0.0'
 dependencies:
   flutter:
     sdk: flutter
-  flame: ^1.19.0
+  shared_preferences: ^2.3.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

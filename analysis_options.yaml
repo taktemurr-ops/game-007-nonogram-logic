@@ -1,4 +1,11 @@
 include: package:flutter_lints/flutter.yaml
+
 analyzer:
-  errors:
-    deprecated_member_use: ignore
+  exclude:
+    - build/**
+    - "**/*.g.dart"
+
+linter:
+  rules:
+    avoid_print: true
+    prefer_const_constructors: false

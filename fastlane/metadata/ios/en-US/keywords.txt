@@ -1,0 +1,1 @@
+nonogram,picross,logic,picture,puzzle,griddler,offline

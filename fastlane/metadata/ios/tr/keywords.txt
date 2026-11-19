@@ -1,0 +1,1 @@
+nonogram,picross,mantık,resim,bulmaca,griddler,offline

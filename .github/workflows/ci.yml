@@ -72,7 +72,7 @@ jobs:
       - name: Web build
         run: flutter build web --release
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: game-007-nonogram-logic-android
           path: |
@@ -81,19 +81,19 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: game-007-nonogram-logic-debug-symbols
           path: build/symbols
           retention-days: 90
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: game-007-nonogram-logic-web
           path: build/web
           retention-days: 14
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: game-007-nonogram-logic-store-graphics
           path: store/
